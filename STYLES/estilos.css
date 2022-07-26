@@ -37,6 +37,9 @@ body{
     border-bottom: 2px solid #0cc201;
     font-size: 20px;
 }
+.nav-main ul li a:active{
+    font-size: 16px;
+}
 .nav-main ul li a{
     color: #0cc201;
     display: inline-block;
@@ -133,4 +136,8 @@ li{
     border: 2px solid #F58718;
     background-color: #fff;
     color: #F58718;
+}
+/*boton cuando esta presionado*/
+.info a:active{
+    font-size: 16px;
 }
