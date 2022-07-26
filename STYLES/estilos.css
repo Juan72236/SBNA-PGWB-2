@@ -34,17 +34,15 @@ body{
     padding: 30px;
 }
 .nav-main ul li a:hover{
-    border-radius: 25px;
-    background-color: #F58718;
-    color: #fff;
-    padding: 15px 30px;
-    -webkit-border-radius: 25px;
-    -moz-border-radius: 25px;
-    -ms-border-radius: 25px;
-    -o-border-radius: 25px;
+    /*background-color: #F58718;*/
+    /*color: #fff;*/
+    border-bottom: 2px solid #0cc201;
+    font-size: 20px;
 }
 .nav-main ul li a{
-    color: #0cc201
+    color: #0cc201;
+    display: inline-block;
+    transition-duration: 0.4s;
 }
 .nav-main ul.nav-menu{
     flex: 1;
