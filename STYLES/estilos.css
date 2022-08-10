@@ -8,22 +8,29 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 }
 .container{
-    width: 90%;
+    width: 100%;
     margin: auto;
 }
 /* Barra de navegacion */
 .nav-main{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    max-width: 100%;
     font-size: 17px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
-    box-shadow: 0 15px 25px rgba(0,0,0,.6);
-    border-radius: 10px;
+    background: #ECBA82;
+    
 }
 /* logo de la pagina */
 .nav-brand{
-    width: 180px;
+    padding: 0 20px;
+    width: 200px;
 }
 
 /* botones a la izquierda */
@@ -34,16 +41,17 @@ body{
     padding: 30px;
 }
 .nav-main ul li a:hover{
-    border-bottom: 2px solid #0cc201;
-    font-size: 20px;
+    border-bottom: 2px solid #297045;
+    font-size: 22px;
 }
 .nav-main ul li a:active{
     font-size: 16px;
 }
 .nav-main ul li a{
-    color: #0cc201;
+    color: #297045;
     display: inline-block;
     transition-duration: 0.4s;
+    font-size: 18px;
 }
 .nav-main ul.nav-menu{
     flex: 1;
@@ -59,18 +67,21 @@ li{
 /*Estilos del banner inicial*/
 .showcase{
     width: 100%;
-    height: 500px;
+    height: 550px;
     animation: banner 10s infinite linear alternate;
     background-size: 100% 100%;
     position: relative;
     display: flex;
-    justify-content: center;
-    
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    top: 80px;
+    -webkit-animation: banner 10s infinite linear alternate;
 }
 
 /*Animaciones del banner*/
 @keyframes banner{
-    0%, 20%{
+   /* 0%, 20%{
         background-image: url(../IMAGES/pexels-greta-hoffman-9706134.jpg0);
     }
    25%, 45%{
@@ -81,7 +92,11 @@ li{
     }
    75%, 100%{
         background-image: url(../IMAGES/IMG_20191208_121833.jpg);
-    }
+    }*/
+    0%{background-image: url(../IMAGES/local.jpg);}
+    40%{background-image: url(../IMAGES/IMG_20191208_121833.jpg);}
+    60%{background-image: url(../IMAGES/pexels-greta-hoffman-9706134.jpg);}
+    100%{background-image: url(../IMAGES/pexels-gustavo-fring-3985062.jpg);}
 }
 
 /*estilos de la capa encima de las imagenes*/
@@ -92,7 +107,10 @@ li{
     top: 0;
     left: 0;
     background: rgba(0,0,0,.6);
-    /*border-radius: 10px;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 /*estilos de la informacion dentro del banner*/
 .capa.info{
@@ -121,7 +139,7 @@ li{
 .info a{
     color: #fff;
     text-decoration: none;
-    background-color: #F58F0C;
+    background-color: #ECBA82;
     padding: 16px 37px;
     display: inline-block;
     border-radius: 50px;
@@ -132,19 +150,126 @@ li{
     padding: 15px 30px;
     box-shadow: 0 15px 25px rgba(255, 255, 255, 0.3);
     font-size: 20px;
-    border: 2px solid #F58718;
+    border: 2px solid #ECBA82;
     background-color: #fff;
-    color: #F58718;
+    color: #ECBA82;
 }
 /*boton cuando esta presionado*/
 .info a:active{
     font-size: 16px;
 }
 
-/* estilos seccion nuestra historia */
-.historia{
-    width: 100%;
-    height: 100%;
-    padding: 0 20px;
-    background-color: antiquewhite;
+/* estilos seccion nosotros contenedor*/
+.nosotros{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    overflow: hidden;
+    
+}
+
+/* estilos del titulo */
+.nosotros h2{
+    text-align: center;
+    text-decoration: underline;
+    letter-spacing: 4px;
+    margin-top: 20px;
+}
+
+/* estilos seccion nosotros hijo*/
+.nosotros .nosotros-h {
+    margin-top: 100px;
+}
+
+/* estilos cajas de texto */
+.nosotros .nosotros-h .caja{
+    width: 300px;
+    height: 226px;
+    float: left;
+    margin: 0 30px;
+    background: #ECBA82;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    padding: 20px 20px;
+    font-size: 20px;
+    text-align: center;
+    
+    
+}
+
+
+/* ESTILOS CONTACTOS */
+.formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    border-top: solid 2px #adb5bd;
+    background: #81C14B;
+}
+.formulario h3{
+    text-decoration: underline;
+    letter-spacing: 4px;
+    margin: 20px 0;
+}
+.formulario h4{
+    margin: 20px 0;
+    letter-spacing: 2px;
+}
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario textarea{
+    width: 25%;
+    margin: 10px 0;
+    padding: 15px 15px;
+    border: solid 1px #adb5bd;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.formulario textarea{
+    min-height: 100px;
+    max-height: 300px;
+    min-width: 380px;
+    max-width: 380px;
+}
+.formulario input[type="text"]:focus,
+.formulario input[type="email"]:focus,
+.formulario textarea:focus{
+   box-shadow: 0 2px 10px rgba(0,0,0,.6);
+   border: none;
+}
+.formulario input[type="submit"]{
+    margin: 20px 0;
+    padding: 10px 30px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: none;
+    background: #ECBA82;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+}
+.formulario input[type="submit"]:hover{
+    padding: 10px 38px;
+    background: #fff;
+    border: solid 2px #ECBA82;
+    color: #ECBA82;
+    font-size: 22px;
+    box-shadow: 0 10px 8px rgba(255, 255, 255, 0.3);
+}
+.formulario input[type="submit"]:active{
+    padding: 8px 30px;
 }
