@@ -327,3 +327,8 @@ li{
     font-family: 'Roboto Condensed', sans-serif;
     color: aliceblue;
 }
+
+/* RESPONSIVE DESIGN */
+@media screen and (max-width:710px) {
+    
+}
